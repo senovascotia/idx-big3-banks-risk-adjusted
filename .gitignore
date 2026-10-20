@@ -1,0 +1,25 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.vscode/
+
+# Tableau: autosave files, and the generated base workbook (regenerate with tableau/build_workbook.py)
+tableau/*.twbr
+tableau/~*
+tableau/bank_dashboard.twb
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generated tables (regenerate with scripts/verify_yfinance.py and the notebooks).
+# The figures in reports/figures/ are tracked because the report embeds them.
+reports/*
+!reports/figures/
+
+# Tableau extracts (derived from Yahoo Finance prices; regenerate with notebooks/08_tableau_extracts).
+# Do not commit or publish them without checking the data provider's terms.
+tableau/data/

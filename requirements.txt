@@ -1,0 +1,8 @@
+# Versions used for the published results (Python 3.13).
+yfinance==1.7.0
+pandas==3.0.6
+numpy==2.5.4
+statsmodels==0.15.0
+matplotlib==3.11.2
+psycopg[binary]==3.3.6
+ipykernel==7.4.0

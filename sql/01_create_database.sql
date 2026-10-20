@@ -1,0 +1,2 @@
+CREATE DATABASE idx_bank_risk
+    ENCODING 'UTF8';

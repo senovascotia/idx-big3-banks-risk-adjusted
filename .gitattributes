@@ -1,0 +1,8 @@
+# Store text files with LF line endings in the repository, whatever the contributor's OS.
+* text=auto
+
+# Binary files: never touch line endings or diff them as text.
+*.png binary
+*.jpg binary
+*.pdf binary
+*.twbx binary

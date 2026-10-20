@@ -1,0 +1,22 @@
+name: tests
+
+# Runs the 30 offline, hand-worked metric tests. They need no database and no market data.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install test dependencies
+        run: python -m pip install numpy==2.5.4 pandas==3.0.6
+      - name: Run offline metric tests
+        run: python -I tests/test_metrics.py

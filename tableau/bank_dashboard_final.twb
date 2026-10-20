@@ -1,0 +1,3348 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0912.1023                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='3867fe1398ddd4cbaa01cd794a86c7d6072b6c0ec0ed037e3a995e70189c658a' _.fcp.WorkbookFingerprinting.true...creator-author-id='3867fe1398ddd4cbaa01cd794a86c7d6072b6c0ec0ed037e3a995e70189c658a' _.fcp.WorkbookFingerprinting.true...creator-license-type='free' _.fcp.WorkbookFingerprinting.true...creator-machine-id='c77258b67192d90e32d8e9cedc9c966c792549d63cf5db41825b166777a6c8ca' _.fcp.WorkbookFingerprinting.true...license-type='free' _.fcp.WorkbookFingerprinting.true...machine-id='c77258b67192d90e32d8e9cedc9c966c792549d63cf5db41825b166777a6c8ca' source-build='2026.2.3 (20262.26.0912.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Hundred' datatype='real' name='[Hundred]' param-domain-type='any' role='measure' type='quantitative' value='100.0'>
+        <calculation class='tableau' formula='100.0' />
+      </column>
+      <column caption='One' datatype='real' name='[One]' param-domain-type='any' role='measure' type='quantitative' value='1.0'>
+        <calculation class='tableau' formula='1.0' />
+      </column>
+      <column caption='R2 start' datatype='datetime' name='[R2 start]' param-domain-type='any' role='measure' type='quantitative' value='#2022-08-23 00:00:00#'>
+        <calculation class='tableau' formula='#2022-08-23 00:00:00#' />
+      </column>
+      <column caption='R3 start' datatype='datetime' name='[R3 start]' param-domain-type='any' role='measure' type='quantitative' value='#2024-09-18 00:00:00#'>
+        <calculation class='tableau' formula='#2024-09-18 00:00:00#' />
+      </column>
+      <column caption='Stub start' datatype='datetime' name='[Stub start]' param-domain-type='any' role='measure' type='quantitative' value='#2026-05-20 00:00:00#'>
+        <calculation class='tableau' formula='#2026-05-20 00:00:00#' />
+      </column>
+      <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+        <calculation class='tableau' formula='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='kpi' inline='true' name='federated.kpi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='kpi' name='textscan.kpi'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='kpi.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.kpi' name='kpi.csv' table='[kpi#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ticker' ordinal='0' />
+            <column datatype='real' name='price_return_pct' ordinal='1' />
+            <column datatype='real' name='total_return_pct' ordinal='2' />
+            <column datatype='real' name='sharpe' ordinal='3' />
+            <column datatype='real' name='sharpe_diff_vs_ihsg' ordinal='4' />
+            <column datatype='real' name='sharpe_diff_p' ordinal='5' />
+            <column datatype='real' name='beta' ordinal='6' />
+            <column datatype='real' name='r2' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_return_pct]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>price_return_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_return_pct]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>total_return_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>sharpe</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_diff_vs_ihsg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_diff_vs_ihsg]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>sharpe_diff_vs_ihsg</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_diff_p</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_diff_p]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>sharpe_diff_p</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beta</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[beta]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>beta</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>r2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[r2]</local-name>
+            <parent-name>[kpi.csv]</parent-name>
+            <remote-alias>r2</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='Beta' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta]' role='measure' type='quantitative' />
+      <column caption='Price return 2021-26' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[price_return_pct]' role='measure' type='quantitative' />
+      <column caption='R-squared' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2]' role='measure' type='quantitative' />
+      <column caption='Sharpe ratio' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe]' role='measure' type='quantitative' />
+      <column caption='p-value' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_diff_p]' role='measure' type='quantitative' />
+      <column caption='Sharpe minus IHSG' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_diff_vs_ihsg]' role='measure' type='quantitative' />
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <column caption='Total return incl. dividends' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[total_return_pct]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.kpi' name='kpi.csv' table='[kpi#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='ticker' ordinal='0' />
+                  <column datatype='real' name='price_return_pct' ordinal='1' />
+                  <column datatype='real' name='total_return_pct' ordinal='2' />
+                  <column datatype='real' name='sharpe' ordinal='3' />
+                  <column datatype='real' name='sharpe_diff_vs_ihsg' ordinal='4' />
+                  <column datatype='real' name='sharpe_diff_p' ordinal='5' />
+                  <column datatype='real' name='beta' ordinal='6' />
+                  <column datatype='real' name='r2' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='daily_series' inline='true' name='federated.daily' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='daily_series' name='textscan.daily'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='daily_series.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.daily' name='daily_series.csv' table='[daily_series#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='trade_date' ordinal='0' />
+            <column datatype='string' name='ticker' ordinal='1' />
+            <column datatype='string' name='regime' ordinal='2' />
+            <column datatype='real' name='growth_index' ordinal='3' />
+            <column datatype='real' name='drawdown_pct' ordinal='4' />
+            <column datatype='real' name='rolling_sharpe_252' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trade_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[trade_date]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>trade_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>regime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[regime]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>regime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>growth_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[growth_index]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>growth_index</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drawdown_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[drawdown_pct]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>drawdown_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rolling_sharpe_252</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rolling_sharpe_252]</local-name>
+            <parent-name>[daily_series.csv]</parent-name>
+            <remote-alias>rolling_sharpe_252</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='Drawdown' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[drawdown_pct]' role='measure' type='quantitative' />
+      <column caption='Growth of 100' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[growth_index]' role='measure' type='quantitative' />
+      <column caption='Regime' datatype='string' name='[regime]' role='dimension' type='nominal' />
+      <column caption='Rolling 252-day Sharpe ratio' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[rolling_sharpe_252]' role='measure' type='quantitative' />
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='date' name='[trade_date]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.daily' name='daily_series.csv' table='[daily_series#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='trade_date' ordinal='0' />
+                  <column datatype='string' name='ticker' ordinal='1' />
+                  <column datatype='string' name='regime' ordinal='2' />
+                  <column datatype='real' name='growth_index' ordinal='3' />
+                  <column datatype='real' name='drawdown_pct' ordinal='4' />
+                  <column datatype='real' name='rolling_sharpe_252' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='period_metrics' inline='true' name='federated.metrics' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='period_metrics' name='textscan.metrics'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='period_metrics.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.metrics' name='period_metrics.csv' table='[period_metrics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='period' ordinal='0' />
+            <column datatype='integer' name='period_order' ordinal='1' />
+            <column datatype='string' name='ticker' ordinal='2' />
+            <column datatype='string' name='basis' ordinal='3' />
+            <column datatype='integer' name='n_days' ordinal='4' />
+            <column datatype='real' name='cum_return_pct' ordinal='5' />
+            <column datatype='real' name='ann_return_pct' ordinal='6' />
+            <column datatype='real' name='ann_vol_pct' ordinal='7' />
+            <column datatype='real' name='sharpe' ordinal='8' />
+            <column datatype='real' name='sharpe_ci_low' ordinal='9' />
+            <column datatype='real' name='sharpe_ci_high' ordinal='10' />
+            <column datatype='real' name='mdd_pct' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[period_order]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>period_order</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>basis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[basis]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>basis</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[n_days]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>n_days</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cum_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cum_return_pct]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>cum_return_pct</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ann_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ann_return_pct]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>ann_return_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ann_vol_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ann_vol_pct]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>ann_vol_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>sharpe</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_ci_low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_ci_low]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>sharpe_ci_low</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_ci_high</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_ci_high]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>sharpe_ci_high</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mdd_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mdd_pct]</local-name>
+            <parent-name>[period_metrics.csv]</parent-name>
+            <remote-alias>mdd_pct</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='Annualized return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[ann_return_pct]' role='measure' type='quantitative' />
+      <column caption='Annualized volatility' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[ann_vol_pct]' role='measure' type='quantitative' />
+      <column caption='Return basis' datatype='string' name='[basis]' role='dimension' type='nominal' />
+      <column caption='Cumulative return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[cum_return_pct]' role='measure' type='quantitative' />
+      <column caption='Maximum drawdown' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[mdd_pct]' role='measure' type='quantitative' />
+      <column caption='Return days' datatype='integer' name='[n_days]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+      <column caption='Period order' datatype='integer' name='[period_order]' role='dimension' type='ordinal' />
+      <column caption='Sharpe ratio' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe]' role='measure' type='quantitative' />
+      <column caption='Sharpe 95% high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_ci_high]' role='measure' type='quantitative' />
+      <column caption='Sharpe 95% low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_ci_low]' role='measure' type='quantitative' />
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.metrics' name='period_metrics.csv' table='[period_metrics#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='period' ordinal='0' />
+                  <column datatype='integer' name='period_order' ordinal='1' />
+                  <column datatype='string' name='ticker' ordinal='2' />
+                  <column datatype='string' name='basis' ordinal='3' />
+                  <column datatype='integer' name='n_days' ordinal='4' />
+                  <column datatype='real' name='cum_return_pct' ordinal='5' />
+                  <column datatype='real' name='ann_return_pct' ordinal='6' />
+                  <column datatype='real' name='ann_vol_pct' ordinal='7' />
+                  <column datatype='real' name='sharpe' ordinal='8' />
+                  <column datatype='real' name='sharpe_ci_low' ordinal='9' />
+                  <column datatype='real' name='sharpe_ci_high' ordinal='10' />
+                  <column datatype='real' name='mdd_pct' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='sharpe_difference' inline='true' name='federated.sdiff' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sharpe_difference' name='textscan.sdiff'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='sharpe_difference.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.sdiff' name='sharpe_difference.csv' table='[sharpe_difference#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='period' ordinal='0' />
+            <column datatype='integer' name='period_order' ordinal='1' />
+            <column datatype='string' name='ticker' ordinal='2' />
+            <column datatype='real' name='sharpe_bank' ordinal='3' />
+            <column datatype='real' name='sharpe_ihsg' ordinal='4' />
+            <column datatype='real' name='delta' ordinal='5' />
+            <column datatype='real' name='ci_low' ordinal='6' />
+            <column datatype='real' name='ci_high' ordinal='7' />
+            <column datatype='real' name='p_value' ordinal='8' />
+            <column datatype='real' name='p_holm' ordinal='9' />
+            <column datatype='string' name='significant_5pct' ordinal='10' />
+            <column datatype='string' name='label' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[period_order]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>period_order</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_bank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_bank]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>sharpe_bank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sharpe_ihsg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sharpe_ihsg]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>sharpe_ihsg</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delta</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[delta]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>delta</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ci_low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ci_low]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>ci_low</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ci_high</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ci_high]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>ci_high</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p_value]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>p_value</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p_holm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p_holm]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>p_holm</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>significant_5pct</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[significant_5pct]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>significant_5pct</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[label]</local-name>
+            <parent-name>[sharpe_difference.csv]</parent-name>
+            <remote-alias>label</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='95% interval high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[ci_high]' role='measure' type='quantitative' />
+      <column caption='95% interval low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[ci_low]' role='measure' type='quantitative' />
+      <column caption='Interval width' datatype='real' name='[ci_width]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[ci_high] - [ci_low]' />
+      </column>
+      <column caption='Sharpe minus IHSG' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[delta]' role='measure' type='quantitative' />
+      <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+      <column caption='Holm-adjusted p' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[p_holm]' role='measure' type='quantitative' />
+      <column caption='p-value' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[p_value]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+      <column caption='Period order' datatype='integer' name='[period_order]' role='dimension' type='ordinal' />
+      <column caption='Sharpe ratio (bank)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_bank]' role='measure' type='quantitative' />
+      <column caption='Sharpe ratio (IHSG)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_ihsg]' role='measure' type='quantitative' />
+      <column caption='Significant at 5%' datatype='string' name='[significant_5pct]' role='dimension' type='nominal' />
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.sdiff' name='sharpe_difference.csv' table='[sharpe_difference#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='period' ordinal='0' />
+                  <column datatype='integer' name='period_order' ordinal='1' />
+                  <column datatype='string' name='ticker' ordinal='2' />
+                  <column datatype='real' name='sharpe_bank' ordinal='3' />
+                  <column datatype='real' name='sharpe_ihsg' ordinal='4' />
+                  <column datatype='real' name='delta' ordinal='5' />
+                  <column datatype='real' name='ci_low' ordinal='6' />
+                  <column datatype='real' name='ci_high' ordinal='7' />
+                  <column datatype='real' name='p_value' ordinal='8' />
+                  <column datatype='real' name='p_holm' ordinal='9' />
+                  <column datatype='string' name='significant_5pct' ordinal='10' />
+                  <column datatype='string' name='label' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='capm' inline='true' name='federated.capm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='capm' name='textscan.capm'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='capm.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.capm' name='capm.csv' table='[capm#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='period' ordinal='0' />
+            <column datatype='integer' name='period_order' ordinal='1' />
+            <column datatype='string' name='ticker' ordinal='2' />
+            <column datatype='integer' name='n' ordinal='3' />
+            <column datatype='real' name='beta' ordinal='4' />
+            <column datatype='real' name='beta_ci_low' ordinal='5' />
+            <column datatype='real' name='beta_ci_high' ordinal='6' />
+            <column datatype='real' name='p_beta_eq_1' ordinal='7' />
+            <column datatype='real' name='p_beta_eq_1_holm' ordinal='8' />
+            <column datatype='real' name='p_beta_eq_1_newey_west' ordinal='9' />
+            <column datatype='real' name='r2' ordinal='10' />
+            <column datatype='real' name='r2_ci_low' ordinal='11' />
+            <column datatype='real' name='r2_ci_high' ordinal='12' />
+            <column datatype='real' name='alpha_ann_pct' ordinal='13' />
+            <column datatype='real' name='alpha_p' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[period_order]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>period_order</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[n]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>n</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beta</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[beta]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>beta</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beta_ci_low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[beta_ci_low]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>beta_ci_low</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beta_ci_high</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[beta_ci_high]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>beta_ci_high</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p_beta_eq_1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p_beta_eq_1]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>p_beta_eq_1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p_beta_eq_1_holm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p_beta_eq_1_holm]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>p_beta_eq_1_holm</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p_beta_eq_1_newey_west</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p_beta_eq_1_newey_west]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>p_beta_eq_1_newey_west</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>r2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[r2]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>r2</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>r2_ci_low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[r2_ci_low]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>r2_ci_low</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>r2_ci_high</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[r2_ci_high]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>r2_ci_high</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>alpha_ann_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[alpha_ann_pct]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>alpha_ann_pct</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>alpha_p</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[alpha_p]</local-name>
+            <parent-name>[capm.csv]</parent-name>
+            <remote-alias>alpha_p</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='Annualized intercept' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[alpha_ann_pct]' role='measure' type='quantitative' />
+      <column caption='p (intercept)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[alpha_p]' role='measure' type='quantitative' />
+      <column caption='Beta' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta]' role='measure' type='quantitative' />
+      <column caption='Beta 95% high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta_ci_high]' role='measure' type='quantitative' />
+      <column caption='Beta 95% low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta_ci_low]' role='measure' type='quantitative' />
+      <column caption='Beta interval width' datatype='real' name='[beta_ci_width]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[beta_ci_high] - [beta_ci_low]' />
+      </column>
+      <column caption='Return days' datatype='integer' name='[n]' role='measure' type='quantitative' />
+      <column caption='p (beta = 1)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[p_beta_eq_1]' role='measure' type='quantitative' />
+      <column caption='Holm-adjusted p (beta = 1)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[p_beta_eq_1_holm]' role='measure' type='quantitative' />
+      <column caption='Newey-West p (beta = 1)' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[p_beta_eq_1_newey_west]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+      <column caption='Period order' datatype='integer' name='[period_order]' role='dimension' type='ordinal' />
+      <column caption='R-squared' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2]' role='measure' type='quantitative' />
+      <column caption='R-squared 95% high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2_ci_high]' role='measure' type='quantitative' />
+      <column caption='R-squared 95% low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2_ci_low]' role='measure' type='quantitative' />
+      <column caption='R-squared interval width' datatype='real' name='[r2_ci_width]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[r2_ci_high] - [r2_ci_low]' />
+      </column>
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.capm' name='capm.csv' table='[capm#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='period' ordinal='0' />
+                  <column datatype='integer' name='period_order' ordinal='1' />
+                  <column datatype='string' name='ticker' ordinal='2' />
+                  <column datatype='integer' name='n' ordinal='3' />
+                  <column datatype='real' name='beta' ordinal='4' />
+                  <column datatype='real' name='beta_ci_low' ordinal='5' />
+                  <column datatype='real' name='beta_ci_high' ordinal='6' />
+                  <column datatype='real' name='p_beta_eq_1' ordinal='7' />
+                  <column datatype='real' name='p_beta_eq_1_holm' ordinal='8' />
+                  <column datatype='real' name='p_beta_eq_1_newey_west' ordinal='9' />
+                  <column datatype='real' name='r2' ordinal='10' />
+                  <column datatype='real' name='r2_ci_low' ordinal='11' />
+                  <column datatype='real' name='r2_ci_high' ordinal='12' />
+                  <column datatype='real' name='alpha_ann_pct' ordinal='13' />
+                  <column datatype='real' name='alpha_p' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='market_implied' inline='true' name='federated.implied' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='market_implied' name='textscan.implied'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='market_implied.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.implied' name='market_implied.csv' table='[market_implied#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='period' ordinal='0' />
+            <column datatype='integer' name='period_order' ordinal='1' />
+            <column datatype='string' name='ticker' ordinal='2' />
+            <column datatype='real' name='beta' ordinal='3' />
+            <column datatype='real' name='ihsg_return_pct' ordinal='4' />
+            <column datatype='real' name='actual_pct' ordinal='5' />
+            <column datatype='real' name='market_implied_pct' ordinal='6' />
+            <column datatype='real' name='gap_pct_points' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[period_order]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>period_order</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beta</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[beta]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>beta</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ihsg_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ihsg_return_pct]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>ihsg_return_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>actual_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[actual_pct]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>actual_pct</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market_implied_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[market_implied_pct]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>market_implied_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gap_pct_points</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gap_pct_points]</local-name>
+            <parent-name>[market_implied.csv]</parent-name>
+            <remote-alias>gap_pct_points</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='Actual return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[actual_pct]' role='measure' type='quantitative' />
+      <column caption='Beta' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta]' role='measure' type='quantitative' />
+      <column caption='Not accounted for by market exposure' datatype='real' default-format='n#,##0.0&quot; pts&quot;;-#,##0.0&quot; pts&quot;' name='[gap_pct_points]' role='measure' type='quantitative' />
+      <column caption='IHSG return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[ihsg_return_pct]' role='measure' type='quantitative' />
+      <column caption='Market-implied return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[market_implied_pct]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+      <column caption='Period order' datatype='integer' name='[period_order]' role='dimension' type='ordinal' />
+      <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.implied' name='market_implied.csv' table='[market_implied#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='period' ordinal='0' />
+                  <column datatype='integer' name='period_order' ordinal='1' />
+                  <column datatype='string' name='ticker' ordinal='2' />
+                  <column datatype='real' name='beta' ordinal='3' />
+                  <column datatype='real' name='ihsg_return_pct' ordinal='4' />
+                  <column datatype='real' name='actual_pct' ordinal='5' />
+                  <column datatype='real' name='market_implied_pct' ordinal='6' />
+                  <column datatype='real' name='gap_pct_points' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='regimes' inline='true' name='federated.regimes' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='regimes' name='textscan.regimes'>
+            <connection class='textscan' directory='D:/Data Analyst/Portfolio/tableau/data' filename='regimes.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.regimes' name='regimes.csv' table='[regimes#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='regime' ordinal='0' />
+            <column datatype='integer' name='regime_order' ordinal='1' />
+            <column datatype='string' name='label' ordinal='2' />
+            <column datatype='date' name='start_date' ordinal='3' />
+            <column datatype='date' name='end_date' ordinal='4' />
+            <column datatype='integer' name='return_days' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>regime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[regime]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>regime</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>regime_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[regime_order]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>regime_order</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[label]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>label</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[start_date]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>start_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[end_date]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>end_date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>return_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[return_days]</local-name>
+            <parent-name>[regimes.csv]</parent-name>
+            <remote-alias>return_days</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Migrated Data]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='End' datatype='date' name='[end_date]' role='dimension' type='ordinal' />
+      <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+      <column caption='Regime' datatype='string' name='[regime]' role='dimension' type='nominal' />
+      <column caption='Regime order' datatype='integer' name='[regime_order]' role='dimension' type='ordinal' />
+      <column caption='Return days' datatype='integer' name='[return_days]' role='measure' type='quantitative' />
+      <column caption='Start' datatype='date' name='[start_date]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.regimes' name='regimes.csv' table='[regimes#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='regime' ordinal='0' />
+                  <column datatype='integer' name='regime_order' ordinal='1' />
+                  <column datatype='string' name='label' ordinal='2' />
+                  <column datatype='date' name='start_date' ordinal='3' />
+                  <column datatype='date' name='end_date' ordinal='4' />
+                  <column datatype='integer' name='return_days' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight instrument (Overview)' name='[Action1_HIGHLIGHT_OVERVIEW]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Overview' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Overview' />
+      </command>
+    </action>
+    <action caption='Highlight instrument (Detail)' name='[Action2_HIGHLIGHT_DETAIL]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Detail' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Detail' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='S1 Headline tiles'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Full period, 4 Jan 2021 - 30 Sep 2026 (Sharpe minus IHSG: Ledoit-Wolf paired test)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kpi' name='federated.kpi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.kpi'>
+            <column caption='Beta' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta]' role='measure' type='quantitative' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Price return 2021-26' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[price_return_pct]' role='measure' type='quantitative' />
+            <column caption='R-squared' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2]' role='measure' type='quantitative' />
+            <column caption='Sharpe ratio' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe]' role='measure' type='quantitative' />
+            <column caption='p-value' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_diff_p]' role='measure' type='quantitative' />
+            <column caption='Sharpe minus IHSG' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sharpe_diff_vs_ihsg]' role='measure' type='quantitative' />
+            <column-instance column='[beta]' derivation='Sum' name='[sum:beta:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price_return_pct]' derivation='Sum' name='[sum:price_return_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[r2]' derivation='Sum' name='[sum:r2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sharpe]' derivation='Sum' name='[sum:sharpe:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sharpe_diff_p]' derivation='Sum' name='[sum:sharpe_diff_p:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sharpe_diff_vs_ihsg]' derivation='Sum' name='[sum:sharpe_diff_vs_ihsg:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_return_pct]' derivation='Sum' name='[sum:total_return_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+            <column caption='Total return incl. dividends' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[total_return_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.kpi].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:price_return_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:total_return_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:sharpe:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:sharpe_diff_vs_ihsg:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:sharpe_diff_p:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:beta:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.kpi].[sum:r2:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.kpi].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.kpi].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.kpi].[Multiple Values]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.kpi].[none:ticker:nk]</rows>
+        <cols>[federated.kpi].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{D56AA0C7-02D2-4D5F-B102-7680FF6FBF41}' />
+    </worksheet>
+    <worksheet name='S10 Regimes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Regimes (fixed in advance by policy-rate phase)</run>
+            <run fontcolor='#52514e' fontsize='9'>&#10;Return days in each regime</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='regimes' name='federated.regimes' />
+          </datasources>
+          <datasource-dependencies datasource='federated.regimes'>
+            <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+            <column-instance column='[label]' derivation='None' name='[none:label:nk]' pivot='key' type='nominal' />
+            <column-instance column='[regime]' derivation='None' name='[none:regime:nk]' pivot='key' type='nominal' />
+            <column-instance column='[return_days]' derivation='None' name='[none:return_days:qk]' pivot='key' type='quantitative' />
+            <column caption='Regime' datatype='string' name='[regime]' role='dimension' type='nominal' />
+            <column caption='Return days' datatype='integer' name='[return_days]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.regimes].[none:return_days:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.regimes].[none:regime:nk] / [federated.regimes].[none:label:nk])</cols>
+      </table>
+      <simple-id uuid='{45C375C9-F1DB-43E4-A856-FF7FE5C579D6}' />
+    </worksheet>
+    <worksheet name='S2 Growth of 100'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Growth of 100 invested on 30 December 2020 (price return)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+Vertical lines: start of R2, R3 and the Stub</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='daily_series' name='federated.daily' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Hundred' datatype='real' name='[Hundred]' param-domain-type='any' role='measure' type='quantitative' value='100.0'>
+              <calculation class='tableau' formula='100.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.daily'>
+            <column caption='Growth of 100' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[growth_index]' role='measure' type='quantitative' />
+            <column-instance column='[growth_index]' derivation='None' name='[none:growth_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column-instance column='[trade_date]' derivation='Day-Trunc' name='[tdy:trade_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[trade_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.daily].[tdy:trade_date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.daily].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.daily].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.daily].[tdy:trade_date:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='R2' label-type='custom' scope='per-pane' value='#2022-08-23 00:00:00#' value-column='[federated.daily].[tdy:trade_date:qk]' z-order='2' />
+            <reference-line axis-column='[federated.daily].[tdy:trade_date:qk]' enable-instant-analytics='true' formula='constant' id='refline1' label='R3' label-type='custom' scope='per-pane' value='#2024-09-18 00:00:00#' value-column='[federated.daily].[tdy:trade_date:qk]' z-order='3' />
+            <reference-line axis-column='[federated.daily].[tdy:trade_date:qk]' enable-instant-analytics='true' formula='constant' id='refline2' label='Stub' label-type='custom' scope='per-pane' value='#2026-05-20 00:00:00#' value-column='[federated.daily].[tdy:trade_date:qk]' z-order='4' />
+            <reference-line axis-column='[federated.daily].[none:growth_index:qk]' enable-instant-analytics='false' formula='average' id='refline9' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Hundred]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[tdy:trade_date:qk]>]]></run>
+                <run fontcolor='#52514e'>: </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:growth_index:qk]>]]></run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:regime:nk]>]]></run>
+                <run fontcolor='#52514e'>)</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.daily].[none:growth_index:qk]</rows>
+        <cols>[federated.daily].[tdy:trade_date:qk]</cols>
+      </table>
+      <simple-id uuid='{A48D7E6C-9BF4-450E-88EC-55BC54790AE1}' />
+    </worksheet>
+    <worksheet name='S3 Sharpe minus IHSG'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Sharpe ratio of each bank minus the IHSG&apos;s (95% interval)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+Intervals that cross 0: no significant difference. None of the 12 does.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sharpe_difference' name='federated.sdiff' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.sdiff'>
+            <column caption='95% interval high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[ci_high]' role='measure' type='quantitative' />
+            <column caption='95% interval low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[ci_low]' role='measure' type='quantitative' />
+            <column caption='Interval width' datatype='real' name='[ci_width]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ci_high] - [ci_low]' />
+            </column>
+            <column caption='Sharpe minus IHSG' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[delta]' role='measure' type='quantitative' />
+            <column-instance column='[ci_low]' derivation='None' name='[none:ci_low:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ci_width]' derivation='None' name='[none:ci_width:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[delta]' derivation='None' name='[none:delta:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period]' derivation='None' name='[none:period:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.sdiff].[none:ci_low:qk]' scope='cols' value='Sharpe ratio minus IHSG' />
+            <encoding attr='space' class='0' field='[federated.sdiff].[none:delta:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.sdiff].[none:delta:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='display' class='0' field='[federated.sdiff].[none:ticker:nk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.sdiff].[none:ticker:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.sdiff].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.sdiff].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.sdiff].[none:ci_low:qk]' enable-instant-analytics='false' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Zero]' z-order='1' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.sdiff].[none:ci_low:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[federated.sdiff].[none:ticker:nk]' />
+              <size column='[federated.sdiff].[none:ci_width:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: difference </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:delta:qk]>]]></run>
+                <run fontcolor='#52514e'> (95% interval </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>), p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:p_value:qk]>]]></run>
+                <run fontcolor='#52514e'>, Holm-adjusted p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:p_holm:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='110' />
+                <format attr='size' value='0.35' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.sdiff].[none:delta:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.sdiff].[none:ticker:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: difference </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:delta:qk]>]]></run>
+                <run fontcolor='#52514e'> (95% interval </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>), p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:p_value:qk]>]]></run>
+                <run fontcolor='#52514e'>, Holm-adjusted p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.sdiff].[none:p_holm:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.sdiff].[none:period:nk] / [federated.sdiff].[none:ticker:nk])</rows>
+        <cols>([federated.sdiff].[none:ci_low:qk] + [federated.sdiff].[none:delta:qk])</cols>
+      </table>
+      <simple-id uuid='{83F689D6-5158-4404-8F2D-6A8A10968304}' />
+    </worksheet>
+    <worksheet name='S4 Market-implied gap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Return not accounted for by market exposure (percentage points)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+Actual price return minus beta x IHSG plus the risk-free rate. R3: about -23 to -29 points; R2: +15 to +66 points.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='market_implied' name='federated.implied' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.implied'>
+            <column caption='Not accounted for by market exposure' datatype='real' default-format='n#,##0.0&quot; pts&quot;;-#,##0.0&quot; pts&quot;' name='[gap_pct_points]' role='measure' type='quantitative' />
+            <column-instance column='[gap_pct_points]' derivation='None' name='[none:gap_pct_points:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period]' derivation='None' name='[none:period:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='display' class='0' field='[federated.implied].[none:ticker:nk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.implied].[none:ticker:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.implied].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.implied].[none:ticker:nk]' />
+              <text column='[federated.implied].[none:gap_pct_points:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.implied].[none:gap_pct_points:qk]' enable-instant-analytics='false' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Zero]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: actual </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:actual_pct:qk]>]]></run>
+                <run fontcolor='#52514e'>, market-implied </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:market_implied_pct:qk]>]]></run>
+                <run fontcolor='#52514e'>, gap </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:gap_pct_points:qk]>]]></run>
+                <run fontcolor='#52514e'>; beta </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.implied].[none:beta:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.implied].[none:period:nk] / [federated.implied].[none:ticker:nk])</rows>
+        <cols>[federated.implied].[none:gap_pct_points:qk]</cols>
+      </table>
+      <simple-id uuid='{B279C6E2-8580-44CA-A3DA-5B9EBB39B0A8}' />
+    </worksheet>
+    <worksheet name='S5 Beta'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Beta against the IHSG (95% HC3 interval)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+Line at 1: moves one-for-one with the IHSG</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='capm' name='federated.capm' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='One' datatype='real' name='[One]' param-domain-type='any' role='measure' type='quantitative' value='1.0'>
+              <calculation class='tableau' formula='1.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.capm'>
+            <column caption='Beta' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta]' role='measure' type='quantitative' />
+            <column caption='Beta 95% high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta_ci_high]' role='measure' type='quantitative' />
+            <column caption='Beta 95% low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[beta_ci_low]' role='measure' type='quantitative' />
+            <column caption='Beta interval width' datatype='real' name='[beta_ci_width]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[beta_ci_high] - [beta_ci_low]' />
+            </column>
+            <column-instance column='[beta]' derivation='None' name='[none:beta:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[beta_ci_low]' derivation='None' name='[none:beta_ci_low:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[beta_ci_width]' derivation='None' name='[none:beta_ci_width:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period]' derivation='None' name='[none:period:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.capm].[none:beta_ci_low:qk]' scope='cols' value='Beta' />
+            <encoding attr='space' class='0' field='[federated.capm].[none:beta:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.capm].[none:beta:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='display' class='0' field='[federated.capm].[none:ticker:nk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.capm].[none:ticker:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.capm].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.capm].[none:beta_ci_low:qk]' enable-instant-analytics='false' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[One]' z-order='1' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.capm].[none:beta_ci_low:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+              <size column='[federated.capm].[none:beta_ci_width:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: beta </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta:qk]>]]></run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta_ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta_ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>); test of beta = 1: p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:p_beta_eq_1:qk]>]]></run>
+                <run fontcolor='#52514e'>, Holm-adjusted </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:p_beta_eq_1_holm:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='110' />
+                <format attr='size' value='0.35' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.capm].[none:beta:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: beta </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta:qk]>]]></run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta_ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:beta_ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>); test of beta = 1: p = </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:p_beta_eq_1:qk]>]]></run>
+                <run fontcolor='#52514e'>, Holm-adjusted </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:p_beta_eq_1_holm:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.capm].[none:period:nk] / [federated.capm].[none:ticker:nk])</rows>
+        <cols>([federated.capm].[none:beta_ci_low:qk] + [federated.capm].[none:beta:qk])</cols>
+      </table>
+      <simple-id uuid='{E7CE2770-9822-44A5-A01E-79A35083F223}' />
+    </worksheet>
+    <worksheet name='S6 Drawdown'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Drawdown from the running peak (price return)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+Lowest point for all four: 8 June 2026</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='daily_series' name='federated.daily' />
+          </datasources>
+          <datasource-dependencies datasource='federated.daily'>
+            <column caption='Drawdown' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[drawdown_pct]' role='measure' type='quantitative' />
+            <column-instance column='[drawdown_pct]' derivation='None' name='[none:drawdown_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column-instance column='[trade_date]' derivation='Day-Trunc' name='[tdy:trade_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[trade_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.daily].[tdy:trade_date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.daily].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.daily].[none:ticker:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[tdy:trade_date:qk]>]]></run>
+                <run fontcolor='#52514e'>: </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:drawdown_pct:qk]>]]></run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:regime:nk]>]]></run>
+                <run fontcolor='#52514e'>)</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.daily].[none:drawdown_pct:qk]</rows>
+        <cols>[federated.daily].[tdy:trade_date:qk]</cols>
+      </table>
+      <simple-id uuid='{6B06C454-28A9-4D1B-9D9F-1212A4F64931}' />
+    </worksheet>
+    <worksheet name='S7 Rolling Sharpe'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Rolling 252-day Sharpe ratio (annualized, excess over the policy rate)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+First value on 7 January 2022; a window can straddle two regimes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='daily_series' name='federated.daily' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.daily'>
+            <column-instance column='[rolling_sharpe_252]' derivation='None' name='[none:rolling_sharpe_252:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Rolling 252-day Sharpe ratio' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[rolling_sharpe_252]' role='measure' type='quantitative' />
+            <column-instance column='[trade_date]' derivation='Day-Trunc' name='[tdy:trade_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[trade_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.daily].[none:rolling_sharpe_252:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.daily].[none:rolling_sharpe_252:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.daily].[tdy:trade_date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.daily].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.daily].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.daily].[none:rolling_sharpe_252:qk]' enable-instant-analytics='false' formula='average' id='refline9' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Zero]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[tdy:trade_date:qk]>]]></run>
+                <run fontcolor='#52514e'>: </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:rolling_sharpe_252:qk]>]]></run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.daily].[none:regime:nk]>]]></run>
+                <run fontcolor='#52514e'>)</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.daily].[none:rolling_sharpe_252:qk]</rows>
+        <cols>[federated.daily].[tdy:trade_date:qk]</cols>
+      </table>
+      <simple-id uuid='{37AA7353-B387-4071-A923-1F1C63E1FD97}' />
+    </worksheet>
+    <worksheet name='S8 R-squared'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>R-squared against the IHSG (95% bootstrap interval)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+R-squared moves with market volatility as well as with the relationship; read it with beta</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='capm' name='federated.capm' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.capm'>
+            <column-instance column='[period]' derivation='None' name='[none:period:nk]' pivot='key' type='nominal' />
+            <column-instance column='[r2]' derivation='None' name='[none:r2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[r2_ci_low]' derivation='None' name='[none:r2_ci_low:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[r2_ci_width]' derivation='None' name='[none:r2_ci_width:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+            <column caption='R-squared' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2]' role='measure' type='quantitative' />
+            <column caption='R-squared 95% high' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2_ci_high]' role='measure' type='quantitative' />
+            <column caption='R-squared 95% low' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[r2_ci_low]' role='measure' type='quantitative' />
+            <column caption='R-squared interval width' datatype='real' name='[r2_ci_width]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[r2_ci_high] - [r2_ci_low]' />
+            </column>
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.capm].[none:r2_ci_low:qk]' scope='cols' value='R-squared' />
+            <encoding attr='space' class='0' field='[federated.capm].[none:r2:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.capm].[none:r2:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='display' class='0' field='[federated.capm].[none:ticker:nk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.capm].[none:ticker:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.capm].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.capm].[none:r2_ci_low:qk]' enable-instant-analytics='false' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Zero]' z-order='1' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.capm].[none:r2_ci_low:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+              <size column='[federated.capm].[none:r2_ci_width:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: R-squared </run>
+                <run fontname='Tableau Bold'>&lt;[federated.capm].[none:r2:qk]&gt;</run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:r2_ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:r2_ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>)</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='110' />
+                <format attr='size' value='0.35' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.capm].[none:r2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.capm].[none:ticker:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>: R-squared </run>
+                <run fontname='Tableau Bold'>&lt;[federated.capm].[none:r2:qk]&gt;</run>
+                <run fontcolor='#52514e'> (</run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:r2_ci_low:qk]>]]></run>
+                <run fontcolor='#52514e'> to </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.capm].[none:r2_ci_high:qk]>]]></run>
+                <run fontcolor='#52514e'>)</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.capm].[none:period:nk] / [federated.capm].[none:ticker:nk])</rows>
+        <cols>([federated.capm].[none:r2_ci_low:qk] + [federated.capm].[none:r2:qk])</cols>
+      </table>
+      <simple-id uuid='{20ECF929-FA5B-467B-9E9F-1D31B13C7EBD}' />
+    </worksheet>
+    <worksheet name='S9 Price vs total return'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='11'>Cumulative return: price return against total return (banks only)</run>
+            <run fontcolor='#52514e' fontsize='9'>
+The IHSG has no dividend data, so it is not shown on the total-return basis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='period_metrics' name='federated.metrics' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Zero' datatype='real' name='[Zero]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.metrics'>
+            <column caption='Return basis' datatype='string' name='[basis]' role='dimension' type='nominal' />
+            <column caption='Cumulative return' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[cum_return_pct]' role='measure' type='quantitative' />
+            <column-instance column='[basis]' derivation='None' name='[none:basis:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cum_return_pct]' derivation='None' name='[none:cum_return_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period]' derivation='None' name='[none:period:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ticker]' derivation='None' name='[none:ticker:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+            <column caption='Instrument' datatype='string' name='[ticker]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.metrics].[none:ticker:nk]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[none:ticker:nk]' member='&quot;BBCA&quot;' />
+              <groupfilter function='member' level='[none:ticker:nk]' member='&quot;BBRI&quot;' />
+              <groupfilter function='member' level='[none:ticker:nk]' member='&quot;BMRI&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.metrics].[none:ticker:nk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.metrics].[none:ticker:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.metrics].[none:ticker:nk]' type='palette'>
+              <map to='#1baf7a'>
+                <bucket>&quot;BMRI&quot;</bucket>
+              </map>
+              <map to='#2a78d6'>
+                <bucket>&quot;BBCA&quot;</bucket>
+              </map>
+              <map to='#52514e'>
+                <bucket>&quot;IHSG&quot;</bucket>
+              </map>
+              <map to='#eb6834'>
+                <bucket>&quot;BBRI&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.metrics].[none:ticker:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.metrics].[none:cum_return_pct:qk]' enable-instant-analytics='false' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Parameters].[Zero]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.metrics].[none:ticker:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.metrics].[none:period:nk]>]]></run>
+                <run fontcolor='#52514e'>, </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.metrics].[none:basis:nk]>]]></run>
+                <run fontcolor='#52514e'>: </run>
+                <run fontname='Tableau Bold'><![CDATA[<[federated.metrics].[none:cum_return_pct:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.metrics].[none:basis:nk] * [federated.metrics].[none:cum_return_pct:qk])</rows>
+        <cols>([federated.metrics].[none:period:nk] / [federated.metrics].[none:ticker:nk])</cols>
+      </table>
+      <simple-id uuid='{CD16EE9A-6758-452E-A8FF-F46567788395}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Detail'>
+      <style />
+      <size maxheight='800' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='118' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='13300' id='110' type-v2='text' w='87000' x='500' y='500'>
+            <formatted-text>
+              <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='16'>Indonesia&apos;s Big Three banks against the IHSG, 2021-2026
+</run>
+              <run fontcolor='#52514e' fontname='Tableau Book' fontsize='9'>Daily price returns, 4 Jan 2021 - 30 Sep 2026  |  excess over the Bank Indonesia policy rate  |  annualized with 252 days  |  Source: Yahoo Finance, Bank Indonesia; own calculations</run>
+            </formatted-text>
+          </zone>
+          <zone h='13500' id='111' name='S6 Drawdown' pane-specification-id='0' param='[federated.daily].[none:ticker:nk]' type-v2='color' w='11500' x='88000' y='500' />
+          <zone h='31000' id='112' name='S6 Drawdown' w='49500' x='500' y='14000' />
+          <zone h='31000' id='113' name='S7 Rolling Sharpe' w='49500' x='50000' y='14000' />
+          <zone h='31000' id='114' name='S8 R-squared' w='49500' x='500' y='45500' />
+          <zone h='31000' id='115' name='S9 Price vs total return' w='49500' x='50000' y='45500' />
+          <zone h='16800' id='116' name='S10 Regimes' w='99000' x='500' y='77000' />
+          <zone h='5500' id='117' type-v2='text' w='99000' x='500' y='94000'>
+            <formatted-text>
+              <run fontcolor='#52514e' fontname='Tableau Book' fontsize='8'>Historical and in-sample; not a forecast or investment advice. Price returns exclude dividends (the IHSG data has none); all returns in rupiah, no currency adjustment. The banks are part of the IHSG, so beta and R-squared are partly mechanical. Regimes: R1 to 22 Aug 2022, R2 to 17 Sep 2024, R3 to 19 May 2026, Stub to 30 Sep 2026. Full method and limitations: report/report_draft.md.</run>
+            </formatted-text>
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid='{BFE7740B-BC45-4845-842E-57AC3C77D5C3}' />
+    </dashboard>
+    <dashboard name='Overview'>
+      <style />
+      <size maxheight='800' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='109' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='14000' id='101' type-v2='text' w='87878' x='0' y='0'>
+            <formatted-text>
+              <run fontcolor='#0b0b0b' fontname='Tableau Semibold' fontsize='16'>Indonesia&apos;s Big Three banks against the IHSG, 2021-2026
+</run>
+              <run fontcolor='#0b0b0b' fontname='Tableau Book' fontsize='11'>No bank&apos;s risk-adjusted return differs significantly from the IHSG&apos;s. 2024-26 easing regime: banks about -43%, index -19%.
+</run>
+              <run fontcolor='#52514e' fontname='Tableau Book' fontsize='9'>Daily price returns, 4 Jan 2021 - 30 Sep 2026  |  excess over the Bank Indonesia policy rate  |  annualized with 252 days  |  Source: Yahoo Finance, Bank Indonesia; own calculations</run>
+            </formatted-text>
+          </zone>
+          <zone h='13695' id='102' name='S2 Growth of 100' pane-specification-id='0' param='[federated.daily].[none:ticker:nk]' type-v2='color' w='11617' x='88383' y='505' />
+          <zone h='16608' id='103' name='S1 Headline tiles' w='100000' x='0' y='14200' />
+          <zone h='31313' id='104' name='S2 Growth of 100' w='57575' x='0' y='30808' />
+          <zone h='31313' id='105' name='S3 Sharpe minus IHSG' w='41920' x='58080' y='30808' />
+          <zone h='31313' id='106' name='S4 Market-implied gap' w='57575' x='0' y='62626' />
+          <zone h='31313' id='107' name='S5 Beta' w='41920' x='58080' y='62626' />
+          <zone h='5556' id='108' type-v2='text' w='100000' x='0' y='94444'>
+            <formatted-text>
+              <run fontcolor='#52514e' fontname='Tableau Book' fontsize='8'>Historical and in-sample; not a forecast or investment advice. Price returns exclude dividends (the IHSG data has none); all returns in rupiah, no currency adjustment. The banks are part of the IHSG, so beta and R-squared are partly mechanical. Regimes: R1 to 22 Aug 2022, R2 to 17 Sep 2024, R3 to 19 May 2026, Stub to 30 Sep 2026. Full method and limitations: report/report_draft.md.</run>
+            </formatted-text>
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid='{2AB1CF36-FEA8-4B58-A563-050EED7161C2}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='58'>
+    <window class='worksheet' name='S1 Headline tiles'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CC9E53A7-AC55-4E23-8357-21BAF5BDACEE}' />
+    </window>
+    <window class='worksheet' name='S2 Growth of 100'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BA137019-C70D-4BEF-9643-7C34AF725FD0}' />
+    </window>
+    <window class='worksheet' name='S6 Drawdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4468F5BC-50D0-473F-B681-5F72B8E59BAE}' />
+    </window>
+    <window class='worksheet' name='S7 Rolling Sharpe'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48A9A8D1-A4BA-44EB-953C-CD219BCA79AF}' />
+    </window>
+    <window class='worksheet' name='S3 Sharpe minus IHSG'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A2FB8006-9628-4253-A1AB-42F2059E9779}' />
+    </window>
+    <window class='worksheet' name='S5 Beta'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E8E2EE72-C0A0-410F-959C-79AB8BD53C47}' />
+    </window>
+    <window class='worksheet' name='S8 R-squared'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B25C653D-8DCE-44CB-B75C-E26E2685FFCD}' />
+    </window>
+    <window class='worksheet' name='S4 Market-implied gap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{277941AF-5679-40D1-934F-E73782D686D9}' />
+    </window>
+    <window class='worksheet' name='S9 Price vs total return'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B4D9F588-A0D0-4B80-9C4B-8A328DEC49B7}' />
+    </window>
+    <window class='worksheet' name='S10 Regimes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EFCB2C62-C863-4031-926B-A8E41DFF0FFA}' />
+    </window>
+    <window class='dashboard' name='Detail'>
+      <viewpoints>
+        <viewpoint name='S10 Regimes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S6 Drawdown'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S7 Rolling Sharpe'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S8 R-squared'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S9 Price vs total return'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview>
+        <device is-portrait='true' name='iPhone 6' type='Phone' />
+      </device-preview>
+      <simple-id uuid='{BD1C8DD0-1396-4C1C-AA8A-CE27B9C22C42}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Overview'>
+      <viewpoints>
+        <viewpoint name='S1 Headline tiles'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S2 Growth of 100'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.daily].[none:ticker:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='S3 Sharpe minus IHSG'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S4 Market-implied gap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='S5 Beta'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview>
+        <device is-portrait='true' name='iPhone 6' type='Phone' />
+      </device-preview>
+      <simple-id uuid='{B3143FEF-C2A0-43A4-B12A-65434CD30DF4}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Overview' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
